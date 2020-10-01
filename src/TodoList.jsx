@@ -7,8 +7,8 @@ function TodoList(props) {
 
             <div>{props.el.task}</div>
 
-            <button>DEL</button>
-            <button>EDT</button>
+            <button onClick={() => props.deleteButton(props.el.id)}>DEL</button>
+            <button>EDIT</button>
             <button>DONE</button>
             <p/>
         </div>

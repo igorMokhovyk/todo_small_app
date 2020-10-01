@@ -26,11 +26,17 @@ function App() {
   }
 
 
+  const deleteButton = (id) => {
+    const deleteTask = todoList.filter(el => el.id !== id);
+    setTodoList(deleteTask)
+  }
+
+
   return (
     <div className="App">
       <header className="App-header">
         <TodoInput addButton={addButton}/>
-        {todoList.map(el => <TodoList el={el}/>)}
+        {todoList.map(el => <TodoList deleteButton={deleteButton} el={el}/>)}
       </header>
     </div>
   );
