@@ -6,13 +6,18 @@ function TodoInput(props) {
     const [taskInput, setTaskInput] = useState('');
 
 
+    const addNewTodo = () => {
+        props.addButton(titleInput, taskInput);
+        setTitleInput('');
+        setTaskInput('');
 
+    }
 
     return (
         <div>
-            <input type='text'/>
-            <input type='text'/>
-            <button>Add new ToDo</button>
+            <input placeholder='Title' type='text' value={titleInput} onChange={(event) => setTitleInput(event.target.value)}/>
+            <input placeholder='Task' type='text' value={taskInput} onChange={(event) => setTaskInput(event.target.value)}/>
+            <button onClick={addNewTodo}>Add new ToDo</button>
         </div>
     )
 };

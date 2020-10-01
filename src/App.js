@@ -13,10 +13,23 @@ function App() {
   ])
 
 
+
+  const addButton = (titleInput, taskInput) => {
+    const newTodo = {
+      id: Math.random(),
+      title: titleInput,
+      task: taskInput,
+      progress: false
+    }
+    const newList = [...todoList, newTodo];
+    setTodoList(newList)
+  }
+
+
   return (
     <div className="App">
       <header className="App-header">
-        <TodoInput/>
+        <TodoInput addButton={addButton}/>
         {todoList.map(el => <TodoList el={el}/>)}
       </header>
     </div>

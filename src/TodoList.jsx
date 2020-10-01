@@ -3,7 +3,7 @@ import React from "react";
 function TodoList(props) {
     return (
         <div>
-            <li>{props.el.title}</li>
+            <li className='title1'>{props.el.title}</li>
 
             <div>{props.el.task}</div>
 
