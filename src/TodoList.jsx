@@ -16,9 +16,9 @@ function TodoList(props) {
 
     return (
         <div>
-            <li className='title1'>{props.el.title}</li>
+            <li className='title1'>{props.el.name}</li>
 
-            <div>{props.el.task}</div>
+            <div>{props.el.description}</div>
 
             <button onClick={() => props.deleteButton(props.el.id)}>DEL</button>
 

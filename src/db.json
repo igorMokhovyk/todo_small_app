@@ -1,0 +1,28 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "title": "Read",
+      "task": "Read new book about war",
+      "progress": false
+    },
+    {
+      "id": 2,
+      "title": "Listen",
+      "task": "Listen new album ...",
+      "progress": false
+    },
+    {
+      "id": 3,
+      "title": "Watch",
+      "task": "Watch new movie with Hopkins",
+      "progress": false
+    },
+    {
+      "id": 4,
+      "title": "Travel",
+      "task": "Travel next month to Qatar",
+      "progress": false
+    }
+  ]
+}
