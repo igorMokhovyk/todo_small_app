@@ -10,7 +10,18 @@ function App() {
     {id: 2, title: 'Listen', task: 'Listen new album ...', progress: false},
     {id: 3, title: 'Watch', task: 'Watch new movie with Hopkins', progress: false},
     {id: 4, title: 'Travel', task: 'Travel next month to Qatar', progress: false}
-  ])
+  ]);
+
+
+const editAddButton = (id, task) => {
+  const newArr = todoList.map(el => {
+    if (el.id === id) {
+      return {...el, task: task}
+    }
+    return el;
+  })
+  setTodoList(newArr)
+}
 
 
 
@@ -36,7 +47,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <TodoInput addButton={addButton}/>
-        {todoList.map(el => <TodoList deleteButton={deleteButton} el={el}/>)}
+        {todoList.map(el => <TodoList editAddButton={editAddButton} deleteButton={deleteButton} el={el} key={el.id}/>)}
       </header>
     </div>
   );
