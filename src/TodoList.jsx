@@ -16,9 +16,9 @@ function TodoList(props) {
 
     return (
         <div>
-            <li className='title1'>{props.el.name}</li>
+            <li className='title1'>{props.el.title}</li>
 
-            <div>{props.el.description}</div>
+            <div>{props.el.task}</div>
 
             <button onClick={() => props.deleteButton(props.el.id)}>DEL</button>
 
@@ -26,7 +26,8 @@ function TodoList(props) {
             {editInput &&
 
             <>
-                <input placeholder='Task' value={editTaskInput} onChange={(event) => setEditTaskInput(event.target.value)}/>
+                <input placeholder='Task' value={editTaskInput}
+                       onChange={(event) => setEditTaskInput(event.target.value)}/>
                 {editInput && <button onClick={editButtonAdd}>Add</button>}
             </>
             }

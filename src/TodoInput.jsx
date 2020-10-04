@@ -15,11 +15,15 @@ function TodoInput(props) {
 
     return (
         <div>
-            <input placeholder='Title' type='text' value={titleInput} onChange={(event) => setTitleInput(event.target.value)}/>
-            <input placeholder='Task' type='text' value={taskInput} onChange={(event) => setTaskInput(event.target.value)}/>
+            <input placeholder='Title' type='text' value={titleInput}
+                   onChange={(event) => setTitleInput(event.target.value)}/>
+            <input placeholder='Task' type='text' value={taskInput}
+                   onChange={(event) => setTaskInput(event.target.value)}/>
             <button onClick={addNewTodo}>Add new ToDo</button>
         </div>
     )
 };
 
 export default TodoInput;
+
+
