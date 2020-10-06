@@ -1,21 +1,26 @@
 .App {
-  text-align: left;
+  text-align: center;
+  display: inline-block;
+  padding: 20px;
 }
 
-.App-header {
-  background-color: #5490b6;
-  min-height: 100vh;
-  display: block;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+
 
 .title1 {
+  font-family: Menlo;
+  display: grid;
   font-size: large;
   color: whitesmoke;
+  border: black 3px;
+  margin-bottom: 4px;
+  padding: 4px;
+  size: 100px;
+  background-color: slategray;
+  height: border-box;
+}
+
+.list1 {
+  border: orange 3px;
 }
 
 

@@ -5,6 +5,7 @@ function TodoList(props) {
 
     const [editInput, setEditInput] = useState(false);
     const [editTaskInput, setEditTaskInput] = useState('');
+    const [numberOfList, setNumberOfList] = useState('');
 
 
     const editButtonAdd = () => {
@@ -13,10 +14,15 @@ function TodoList(props) {
         setEditInput(!editInput)
     }
 
+    const moveToList = () => {
+        props.mover(numberOfList, props.el.id, props.list, props.setList);
+        setNumberOfList('');
+    }
+
 
     return (
-        <div>
-            <li className='title1'>{props.el.title}</li>
+        <div className='border-dark'>
+            <li className='title1 list1'>{props.el.title}</li>
 
             <div>{props.el.task}</div>
 
@@ -33,6 +39,9 @@ function TodoList(props) {
             }
             {!editInput && <button onClick={() => setEditInput(!editInput)}>EDIT</button>}
             <button>DONE</button>
+            <button onClick={moveToList}>Move to List</button>
+            <input placeholder='#' type='text' value={numberOfList}
+                   onChange={(event) => setNumberOfList(event.target.value)}/>
             <p/>
         </div>
     )
